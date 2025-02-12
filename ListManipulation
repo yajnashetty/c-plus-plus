@@ -1,0 +1,39 @@
+
+#include <iostream>
+#include<vector>
+#include<list>
+#include<iterator>
+using namespace std;
+int main() {
+    list<int> mylist;
+    vector<int> v;
+    mylist.push_back(100);
+    mylist.push_back(20);
+    mylist.push_back(30);
+    mylist.push_back(10);
+    mylist.push_back(0);
+    for(int i:mylist)
+    {
+        cout<<i<<" ";
+    }
+    mylist.pop_back();
+    mylist.pop_front();
+    
+    for(int i:mylist)
+    {
+        cout<<i<<" ";
+    }
+    cout<<endl;
+    
+    auto it=mylist.begin();
+    advance(it,1);
+    mylist.insert(it,15);
+    for(int i:mylist )
+    {
+        cout<<i<<" ";
+    }
+    cout<<endl;
+    
+    
+    return 0;
+}
