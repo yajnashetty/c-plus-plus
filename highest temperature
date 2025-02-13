@@ -1,4 +1,4 @@
-
+// Online C++ compiler to run C++ program online
 #include <iostream>
 using namespace std;
 int temperature(int* arr, int n) { 
@@ -18,6 +18,7 @@ int temperature(int* arr, int n) {
 int main() {
     // Write C++ code here
     int temp[] = {30,29,35,20};
+    int temp11[] = {30,29,35,20};
     int temp1;
     int n = sizeof(temp)/sizeof(temp[0]);
     for(int i = 0 ; i<n-1 ; i++)
@@ -35,7 +36,15 @@ int main() {
     }
     cout<<endl;
     int highestTemp = temperature(temp, n); 
+    
     cout << "Highest temperature:"<<" "<<highestTemp;
+    cout<<endl;
+     for(int j= 0 ; j<n-1; j++)
+        if (temp11[j]>temp11[j+1])
+        {
+            cout<<temp11[j]<<" ";
+            
+        }
 
     return 0;
 }
