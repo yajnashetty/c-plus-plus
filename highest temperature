@@ -1,0 +1,41 @@
+
+#include <iostream>
+using namespace std;
+int temperature(int* arr, int n) { 
+    if (n == 0)
+    return -1; 
+    int highest = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > highest) {
+            highest = arr[i];
+        }
+    }
+    return highest;
+}
+
+    
+
+int main() {
+    // Write C++ code here
+    int temp[] = {30,29,35,20};
+    int temp1;
+    int n = sizeof(temp)/sizeof(temp[0]);
+    for(int i = 0 ; i<n-1 ; i++)
+    {
+        for(int j= 0 ; j<n-1-i; j++)
+        if (temp[j]>temp[j+1])
+        {
+            swap(temp[j],temp[j+1]);
+        }
+    }
+    cout<<"sorted array"<<endl;
+    for (int i :temp)
+    {
+        cout<<i<<" ";
+    }
+    cout<<endl;
+    int highestTemp = temperature(temp, n); 
+    cout << "Highest temperature:"<<" "<<highestTemp;
+
+    return 0;
+}
