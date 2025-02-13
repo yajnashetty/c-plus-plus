@@ -1,0 +1,27 @@
+
+#include <iostream>
+#include<stack>
+#include<vector>
+using namespace std;
+int main() {
+    std::vector<int> arr= {2000, 500, 200, 100, 50, 20, 10, 5, 2, 1};
+    
+    int change,count = 0;
+    cout<<"enter the target value ";
+    cin>>change;
+    
+    printf("notes used are :");
+    for(int i = 0; i<arr.size();i++)
+    {
+        while(change >= arr[i] && arr[i] != 0)
+        {
+            change = change - arr[i];
+            cout<<arr[i]<<" ";
+            count++;
+        }
+    }
+    printf("the no of noted requried were :%d",count);
+    
+
+    return 0;
+}
