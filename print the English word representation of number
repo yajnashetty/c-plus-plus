@@ -1,0 +1,33 @@
+//Given two integers a and b, print the English word representation
+//for each number from a to b (inclusive) if it's between 1 and 9.  For numbers greater than 9, print "even" if the number is even, and "odd" if it's odd.
+#include <iostream>
+#include <cstdio>
+#include <vector>
+#include<string>
+using namespace std;
+
+int main() {
+    // Complete the code.
+    int a ,b;
+    vector<string> arr= { "one","two","three","four","five","six","seven","eight","nine" };
+    vector<string> arr1 = {"even","odd"};
+    
+    scanf("%d%d",&a,&b);
+    for(int i = a; i<=b; i++){
+    if (i>0 &&i<=9)
+    {
+        cout<<arr[i-1]<<endl;
+    }
+    else
+    { if (i%2==0)
+    {
+        cout<<arr1[0]<<endl;
+    }
+    else{
+        cout<<arr1[1]<<endl;
+    }
+        
+    }
+    }
+    return 0;
+}
