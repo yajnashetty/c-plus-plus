@@ -20,6 +20,7 @@ int main() {
             count++;
         }
     }
+    printf("\n");
     printf("the no of noted requried were :%d",count);
     
 
