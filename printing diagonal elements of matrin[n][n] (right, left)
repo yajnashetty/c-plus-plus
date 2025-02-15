@@ -1,0 +1,65 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int i , j;
+ 
+   cout<<"enter the value of i , j"<<endl;
+   cin>>i;
+   cin>>j;
+    int a[i][j];
+    cout<<"enter the matrix elements"<<endl;
+   for(int m = 0; m<i; m++)
+   {
+       for(int n = 0 ; n<j; n++)
+       {
+           cin>>a[m][n];
+       }
+       cout<<endl;
+   }
+   cout << "The matrix is:" << endl;
+    for (int m = 0; m < i; m++) {
+        for (int n = 0; n < j; n++) {
+            cout << a[m][n] << " ";
+        }
+        cout << endl;
+    }
+ cout<<endl;
+  for(int m = 0; m<i; m++)
+  {
+      for(int n = 0 ; n<j; n++)
+      {
+          if (m == n){
+          cout<<a[m][n]<<" ";
+          }
+          else
+          {
+              
+              cout<<"0"<< " ";
+          }
+      }
+      cout<<endl;
+  }
+ 
+ cout<<endl;
+  for(int m = 0; m<i; m++)
+  {
+      for(int n = 0 ; n<j; n++)
+      {
+          if (m+n==i-1){
+          cout<<a[m][n]<<" ";
+          }
+          else
+          {
+              
+              cout<<"0"<< " ";
+          }
+      }
+      cout<<endl;
+  }
+ 
+ 
+   
+
+    return 0;
+}
+
